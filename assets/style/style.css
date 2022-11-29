@@ -192,9 +192,18 @@ html, body {
   font-size: 16px;
   color: #000;
   overflow-x: hidden;
-  overflow-y: hidden;
   width: 100%;
   font-family: "Carlito";
+}
+@media (max-width: 767px) {
+  html, body {
+    overflow-y: initial;
+  }
+}
+@media (min-width: 768px) and (max-width: 1098px) {
+  html, body {
+    overflow-y: initial;
+  }
 }
 
 a {
@@ -246,10 +255,21 @@ main .nom {
   line-height: 100px;
   margin-top: 20px;
 }
+@media (max-width: 767px) {
+  main .nom {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
 main p {
   font-size: 24px;
   font-style: italic;
   margin-top: 20px;
+}
+@media (max-width: 767px) {
+  main p {
+    font-size: 18px;
+  }
 }
 
 .line {
@@ -257,6 +277,11 @@ main p {
   height: 2px;
   width: 100%;
   background: linear-gradient(273.94deg, #378562 0%, #184A45 139.74%);
+}
+@media (max-width: 767px) {
+  .line {
+    width: 70%;
+  }
 }
 
 .large-exp .line {
@@ -344,9 +369,23 @@ section {
     grid-template-columns: 1fr;
   }
 }
+@media (min-width: 768px) and (max-width: 1098px) {
+  section {
+    grid-template-columns: 1fr;
+  }
+}
 
 .skills-list {
   position: relative;
+}
+@media (max-width: 480px) {
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 767px) {
   .skills-list {
@@ -354,12 +393,42 @@ section {
     flex-direction: column;
     gap: 20px;
     margin-top: 40px;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1098px) {
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 50px;
   }
 }
 .skills-list .skill-list-items {
   position: absolute;
 }
+@media (max-width: 480px) {
+  .skills-list .skill-list-items {
+    position: relative !important;
+    top: initial !important;
+    left: initial !important;
+    bottom: initial !important;
+    right: initial !important;
+    width: 100%;
+  }
+}
 @media (max-width: 767px) {
+  .skills-list .skill-list-items {
+    position: relative !important;
+    top: initial !important;
+    left: initial !important;
+    bottom: initial !important;
+    right: initial !important;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1098px) {
   .skills-list .skill-list-items {
     position: relative !important;
     top: initial !important;
